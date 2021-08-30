@@ -3,7 +3,7 @@
 
 const size_t MAX_INPUT_SIZE = 512;
 
-void Change_Message(char *message, unsigned msg_len, const char *key, unsigned key_len)
+void changeMessage(char *message, unsigned msg_len, const char *key, unsigned key_len)
 {
     for(unsigned i= 0; i<msg_len; i++)
         for(unsigned j=0; j<key_len; j++)
@@ -30,11 +30,11 @@ int main()
   unsigned msg_lenght = strlen(message);
   unsigned key_lenght = strlen(key);
 
-  Change_Message(message, msg_lenght, key, key_lenght);
+  changeMessage(message, msg_lenght, key, key_lenght);
   printf("Encrypted message - %s \n", message);
 
 
-  Change_Message(message, msg_lenght, key, key_lenght);
+  changeMessage(message, msg_lenght, key, key_lenght);
   printf("Decrypted message - %s \n", message);
 
   return 0;
